@@ -12,7 +12,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/recipes");
+        const response = await axios.get("https://cloudy-hosiery-moth.cyclic.cloud/recipes");
         setRecipes(response.data);
       } catch (err) {
         console.error(err);
@@ -22,7 +22,7 @@ export const Home = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/recipes/savedRecipes/ids/${userID}`
+          `https://cloudy-hosiery-moth.cyclic.cloud/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -37,7 +37,7 @@ export const Home = () => {
 
   const saveRecipe = async (recipeID) => {
     try {
-      const response = await axios.put("http://localhost:5001/recipes", {
+      const response = await axios.put("https://cloudy-hosiery-moth.cyclic.cloud/recipes", {
         recipeID,
         userID,
       }, { headers: { Authorization: cookies.access_token }}

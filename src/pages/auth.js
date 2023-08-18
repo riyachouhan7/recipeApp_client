@@ -23,7 +23,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try{
-      const response = await axios.post("http://localhost:5001/auth/login", 
+      const response = await axios.post("https://cloudy-hosiery-moth.cyclic.cloud/auth/login", 
       {
         username,
         password,
@@ -56,7 +56,7 @@ const Register = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:5001/auth/register", {
+      await axios.post("https://cloudy-hosiery-moth.cyclic.cloud/auth/register", {
         username,
         password,
       });

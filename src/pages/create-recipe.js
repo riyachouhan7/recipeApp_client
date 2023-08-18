@@ -39,7 +39,7 @@ export const CreateRecipe = () => {
     event.preventDefault();
     try {
       console.log(recipe,"recipe")
-      const response= await axios.post("http://localhost:5001/recipes", recipe ,
+      const response= await axios.post("https://cloudy-hosiery-moth.cyclic.cloud/recipes", recipe ,
         {
           headers: { authorization: cookies.access_token },
         },
